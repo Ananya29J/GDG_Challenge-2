@@ -8,7 +8,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { NeonButton } from '@/components/ui/neon-button'
 import { useUserStore, TEAM_COLORS } from '@/lib/store'
 import { useRouter } from 'next/navigation'
-import { ArrowLeft, Trophy, Info, Heart, Zap, Target, Users } from 'lucide-react'
+import { ArrowLeft, Trophy, Info, Heart, Zap, Target, Users, Play } from 'lucide-react'
 import { HolographicCard } from '@/components/ui/holographic-card'
 
 // --- 3D Components ---
@@ -273,7 +273,6 @@ function HitFeedback({ type, position }: { type: string | null, position: THREE.
         position={[0, 6, -10]}
         fontSize={4}
         color={type === 'SIX' ? '#00f3ff' : type === 'FOUR' ? '#eab308' : type === 'OUT' ? '#ef4444' : '#ffffff'}
-        font="/fonts/outfit-black.json"
         anchorX="center"
         anchorY="middle"
       >

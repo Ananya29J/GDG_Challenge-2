@@ -64,7 +64,7 @@ function Character({ position, color, label, isPlayer = false }: { position: THR
         <capsuleGeometry args={[0.4, 0.8, 4, 16]} />
         <meshStandardMaterial color={color} emissive={color} emissiveIntensity={isPlayer ? 1 : 0.2} metalness={0.8} roughness={0.2} />
       </mesh>
-      <Text position={[0, 2.2, 0]} fontSize={0.3} color="white" anchorX="center" anchorY="middle" font="/fonts/outfit-bold.json">
+      <Text position={[0, 2.2, 0]} fontSize={0.3} color="white" anchorX="center" anchorY="middle">
         {label}
       </Text>
       {isPlayer && (
