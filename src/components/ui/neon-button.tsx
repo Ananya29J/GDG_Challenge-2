@@ -1,10 +1,10 @@
 "use client"
 
 import * as React from "react"
-import { motion } from "framer-motion"
+import { motion, type HTMLMotionProps } from "framer-motion"
 import { cn } from "@/lib/utils"
 
-interface NeonButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface NeonButtonProps extends HTMLMotionProps<"button"> {
   variant?: "primary" | "secondary" | "outline" | "ghost"
   size?: "sm" | "md" | "lg"
   glow?: boolean
@@ -13,8 +13,10 @@ interface NeonButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> 
 export const NeonButton = React.forwardRef<HTMLButtonElement, NeonButtonProps>(
   ({ className, variant = "primary", size = "md", glow = true, ...props }, ref) => {
     const variants = {
-      primary: "bg-primary-cyber text-background hover:bg-primary-cyber/90 shadow-[0_0_15px_rgba(0,243,255,0.5)]",
-      secondary: "bg-secondary-cyber text-white hover:bg-secondary-cyber/90 shadow-[0_0_15px_rgba(255,0,255,0.5)]",
+      primary:
+        "bg-primary-cyber text-background hover:bg-primary-cyber/90 shadow-[0_0_15px_rgba(0,243,255,0.5)]",
+      secondary:
+        "bg-secondary-cyber text-white hover:bg-secondary-cyber/90 shadow-[0_0_15px_rgba(255,0,255,0.5)]",
       outline: "border-2 border-primary-cyber text-primary-cyber hover:bg-primary-cyber/10",
       ghost: "text-primary-cyber hover:bg-primary-cyber/10",
     }
