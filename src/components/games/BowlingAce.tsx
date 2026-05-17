@@ -27,8 +27,8 @@ function Stadium() {
         <meshStandardMaterial color="#0a2a12" />
       </mesh>
       {/* Stadium Walls */}
-      <mesh position={[0, 5, -30]}>
-         <cylinderGeometry args={[45, 45, 15, 32, 1, true]} rotation={[0, 0, 0]} />
+      <mesh position={[0, 5, -30]} rotation={[0, 0, 0]}>
+         <cylinderGeometry args={[45, 45, 15, 32, 1, true]} />
          <meshStandardMaterial color="#0c0d15" side={THREE.BackSide} />
       </mesh>
     </group>
