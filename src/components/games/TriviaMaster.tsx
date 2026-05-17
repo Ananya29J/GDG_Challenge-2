@@ -130,7 +130,7 @@ export default function TriviaMaster() {
         )}
 
         {gameState === 'playing' && (
-          <motion.div key="playing" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: -20, opacity: 0 }} className="z-10 w-full max-w-4xl space-y-12">
+          <motion.div key="playing" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="z-10 w-full max-w-4xl space-y-12">
             <div className="flex justify-between items-end">
                <div className="space-y-1">
                   <div className="text-[10px] font-black text-slate-500 uppercase tracking-[0.5em]">Question {currentIdx + 1} of {QUESTIONS.length}</div>
